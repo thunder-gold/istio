@@ -108,5 +108,18 @@ const (
 	// DefaultConfigServiceAccountName is the default service account to use for external Istiod cluster access.
 	DefaultConfigServiceAccountName = "istiod-service-account"
 
+	// KubeNamespaceSystem is the system namespace where we place kubernetes system components.
+	KubeNamespaceSystem string = "kube-system"
+
+	// KubeNamespacePublic is the namespace where we place kubernetes public info (ConfigMaps).
+	KubeNamespacePublic string = "kube-public"
+
+	// KubeNamespaceNodeLease is the namespace for the lease objects associated with each kubernetes node.
+	KubeNamespaceNodeLease string = "kube-node-lease"
+
+	// KubeNamespaceLocalPathStorage is the namespace for dynamically provisioning persistent local storage with
+	// Kubernetes. Typically used with the Kind cluster: https://github.com/rancher/local-path-provisioner
+	KubeNamespaceLocalPathStorage string = "local-path-storage"
+
 	TestVMLabel = "istio.io/test-vm"
 )
